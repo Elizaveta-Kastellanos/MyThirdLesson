@@ -27,10 +27,22 @@ for i in range(len(my_list_for_mult)//2):
         new_list_for_mult.append(my_list_for_mult[i] * my_list_for_mult[len(my_list_for_mult)-i-1])
 print(new_list_for_mult)
 
+print('-------------------')
 
 #3.) Задайте список из вещественных чисел. Напишите программу, 
 # которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 # Пример: - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+ 
+my_list_for_max_and_min = [1.1, 1.2, 3.1, 5, 10.01]
+min_num = my_list_for_max_and_min[0] - int(my_list_for_max_and_min[0])
+max_num = my_list_for_max_and_min[0] - int(my_list_for_max_and_min[0])
+for i in range(1, len(my_list_for_max_and_min)):
+    tmp = my_list_for_max_and_min[i] - int(my_list_for_max_and_min[i])
+    if tmp < min_num:
+        min_num = tmp
+    if tmp > max_num:
+        max_num = tmp
+print(round(max_num-min_num, 20))
 
 
 
